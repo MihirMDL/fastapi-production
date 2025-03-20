@@ -1,0 +1,12 @@
+[Unit]
+Description=FastAPI App with Gunicorn
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/path/to/your/fastapi/app
+ExecStart=/usr/bin/gunicorn -k uvicorn.workers.UvicornWorker -w 4 -b 127.0.0.1:8000 main:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
