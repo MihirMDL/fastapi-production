@@ -9,6 +9,21 @@ This guide provides a fully production-ready FastAPI deployment with:
 
 ---
 
+Prerequisite
+
+To install modules run 
+
+- pip install -r requirements.txt
+
+To Freeze and Update Requirements
+If you add new dependencies, you can regenerate the requirements.txt by running:
+
+- pip freeze > requirements.txt
+
+To Run uvicorn command 
+
+- uvicorn Fast-Api:app --host 0.0.0.0 --port 8118 --reload
+
 ## 🔥 1. FastAPI App: `main.py`
 
 First, create the FastAPI app with Docker commands:
